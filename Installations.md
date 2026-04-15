@@ -13,7 +13,7 @@ cd your-folder-name
 ```
 
 
-2. Then npm install 
+3. Then npm install 
 ```bash
 npm install 
 ```
