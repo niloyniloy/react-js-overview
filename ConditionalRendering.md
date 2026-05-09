@@ -8,6 +8,7 @@ In React functional components, we usually write conditional rendering inside th
 
 Use the ternary operator when you want to show one value if the condition is true, and another value if the condition is false.
 
+
 ```jsx
 function UserStatus({ isLoggedIn }) {
 
@@ -63,6 +64,10 @@ export default Dashboard;
 
 Use `&&` when you only want to render something if the condition is true.
 
+If `hasNotification` is `true`, the paragraph will show.
+
+If `hasNotification` is `false`, nothing will show in that place.
+
 ```jsx
 function Notification({ hasNotification }) {
 
@@ -78,36 +83,6 @@ function Notification({ hasNotification }) {
 export default Notification;
 ```
 
-If `hasNotification` is `true`, the paragraph will show.
-
-If `hasNotification` is `false`, nothing will show in that place.
-
-## Rendering A List Only If Data Exists
-
-When working with arrays, check the length before rendering.
-
-```jsx
-function ProductList({ products }) {
-
-	return (
-		<>
-			<h2>Products</h2>
-
-			{products.length > 0 ? (
-				<ul>
-					{products.map((product) => (
-						<li key={product.id}>{product.name}</li>
-					))}
-				</ul>
-			) : (
-				<p>No products found.</p>
-			)}
-		</>
-	);
-}
-
-export default ProductList;
-```
 
 ## Render Nothing Using Null
 
