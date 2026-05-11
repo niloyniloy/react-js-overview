@@ -52,3 +52,36 @@ function Counter() {
 
 export default Counter;
 ```
+
+
+## Extending useState & updating specific state 
+
+```jsx
+import { useState } from "react";
+
+function Counter() {
+	const [states, setStates] = useState({
+		count: 0,
+		status: "Loading ..."
+	});
+
+	const handleIncrease = () => {
+		setStates({
+			...states,
+			count: states.count + 1
+		});
+	};
+
+	return (
+		<>
+			<p>{states.count}</p>
+
+			<button onClick={handleIncrease}>
+				Increase
+			</button>
+		</>
+	);
+}
+
+export default Counter;
+```
