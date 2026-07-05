@@ -7,13 +7,18 @@ Follow those steps to install react in your pc. First make sure Node.js is insta
 npm create vite@latest your-folder-name -- --template react
 ```
 
-2. Go to that folder 
+2. If install in same/current directory
+```bash
+npm create vite@latest . -- --template react
+```
+
+3. Go to that folder 
 ```bash
 cd your-folder-name
 ```
 
 
-3. Then npm install 
+4. Then npm install 
 ```bash
 npm install 
 ```
